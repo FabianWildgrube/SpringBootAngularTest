@@ -1,0 +1,24 @@
+
+plugins {
+  id "com.github.node-gradle.node" version "2.2.0"
+}
+
+apply plugin: 'java'
+
+task buildAngularApp(type: NpxTask) {
+  dependsOn npmInstall
+  command = 'ng'
+  args = ['build', '--prod']
+  inputs.files('package.json', 'package-lock.json', 'angular.json', 'tsconfig.json', 'tsconfig.app.json')
+  inputs.dir('src')
+  inputs.dir(fileTree("node_modules").exclude(".cache"))
+  outputs.dir('dist')
+}
+
+// 3
+jar.dependsOn 'buildAngularApp'
+
+// 4
+jar {
+  from 'dist/angularHerokuTestApp' into 'static'
+}

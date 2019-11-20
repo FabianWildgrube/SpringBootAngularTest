@@ -1,0 +1,4 @@
+allprojects {
+    group = 'de.fabianwildgrube.tests'
+    version = '0.0.1-SNAPSHOT'
+}
