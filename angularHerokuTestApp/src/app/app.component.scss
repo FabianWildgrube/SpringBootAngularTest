@@ -1,0 +1,23 @@
+.demo-chart {
+    height: 400px;
+    width: 60vw;
+    margin: 0 auto;
+    background: white;
+    border-radius: 5px;
+}
+
+.add-btn {
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.my-card {
+    width: 40vw;
+    height: 130px !important;
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
