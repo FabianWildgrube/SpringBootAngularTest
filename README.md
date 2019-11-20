@@ -9,6 +9,8 @@ Diese App ist ein kleiner Test, der unsere Infrastruktur prototypisch modelliert
 
 Travis CI führt automatisch Build&Tests aus, wenn ein neuer Push auf den master kommt. Falls der build problemlos durchläuft deployed es die neue Version nach Heroku.
 
+Live Heroku Deployment: https://fabians-first-spring-angular.herokuapp.com/
+
 ## Travis CI
 CI Service, der eng mit Github verknüpft ist. Repos, für die man Travis aktiviert werden nach jedem push automatisch in einem virtualisierten Environment gebaut, welches komplett clean ist und bei jedem Build neu hoch gefahren wird.
 
