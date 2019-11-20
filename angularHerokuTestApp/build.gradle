@@ -6,7 +6,7 @@ plugins {
 apply plugin: 'java'
 
 node {
-    version = '12.13.1'
+    version = '13.1.0'
     download = true
 }
 
