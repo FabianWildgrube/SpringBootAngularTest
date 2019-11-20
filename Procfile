@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar springBootServer/build/libs/gs-spring-boot-0.1.0.jar
