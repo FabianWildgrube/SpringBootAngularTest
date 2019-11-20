@@ -1,6 +1,12 @@
 # SE QPlix Projekt Team02 - Small test App
 
-Diese App ist ein kleiner Test, der unsere Infrastruktur prototypisch modelliert. Das Backend wird von einem Springboot MVC Server bereitgestellt und served das Frontend (Angular App). Das Frontend ist als separates Projekt gehalten und wird über den Gradle Build-Prozess in ein jar verpackt, welches der Server als Dependency angibt.
+Diese App ist ein kleiner Test, der unsere Infrastruktur prototypisch modelliert. Das Backend wird von einem Springboot MVC Server bereitgestellt und served das Frontend (Angular App).
+
+Inspiriert von [diesem Blogpost](https://ordina-jworks.github.io/architecture/2018/10/12/spring-boot-angular-gradle.html) und [diesem weiteren Blogpost](https://dzone.com/articles/integrating-java-and-npm-builds-using-gradle)
+
+Grobe Idee: Gradle Projekt mit zwei Subprojekten. Das eine Subprojekt ist die Angular App. Damit diese vom Java Server geserved werden kann, lassen wir sie von npm bauen und gradle verpackt das Ergebnis (index.html und ein paar .js files) in einem jar in dem Ordner ```static``` (das ist der DefaultOrdner aus dem Spring MVC Server Content serven, wenn sie keine Route definiert haben).
+
+Das zweite Subprojekt ist dann der Java Server. Der definiert in seinem build-file eine Dependency auf das Angular Projekt. Dadurch bekommt er dessen jar, und damit die Angular-Ressourcen, in seinen classpath.
 
 ## CI/CD Setup
 
